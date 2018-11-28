@@ -1,0 +1,14 @@
+@import 'test';
+@import '../host/input';
+
+$color: blue;
+
+:host {
+  $test: red;
+  @include test();
+
+  @include test-breakpoint-down(md) {
+    @include test();
+    padding: 10px;
+  }
+}
